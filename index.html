@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VueJS Tutorial</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="vue-app">
+      <h1>Some Basics</h1>
+      <p>{{ greet('afternoon') }}</p>
+      <p>Name: {{ name }}</p>
+      <p>Job: {{ job }}</p>
+      <!-- v-bind is a directive
+      telling Vue to bind the href
+      to our dynamic data
+      NOTE: binding can happen
+      with other attributes-->
+      <a v-bind:href="website">web site</a>
+      <p v-html="someHTML"></p>
+      <h1>Events</h1>
+      <button v-on:click="age++">Add year(s)</button>
+      <button v-on:click="subtract(5)">Subtract year(s)</button>
+      <p>My age is {{ age }}</p>
+      <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
