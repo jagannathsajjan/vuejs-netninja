@@ -22,6 +22,7 @@ new Vue({
       this.x = e.screenX;
       this.y = e.screenY;
       //console.log(e);
+      console.log('your crapped website now');
     }
   }
 });
